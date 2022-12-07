@@ -50,8 +50,9 @@ public class ChessMatch {
 		
 		if (!board.ThereisAPiece(position)) {
 			throw new ChessException("Não existe peça nessa posição do tabuleiro ");
-			
-			
+		} 
+		if(board.piece(position).isThereAntPossibleMove()) {
+			throw new ChessException("Não a movimentos possiveis para essa peça" );
 		}
 		
 	}
