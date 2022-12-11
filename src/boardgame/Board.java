@@ -42,11 +42,10 @@ public class Board {
 
 	public void placePiece(Piece piece, Position position) {
 		if (ThereisAPiece(position)) {
-			throw new BoardExeption("Já tem uma peça na posição " + position);
+			throw new BoardExeption("There is already a piece on position " + position);
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
-
 	}
 	
 	public Piece removePiece(Position position) {
